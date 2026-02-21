@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Portfolio | RSR Contracting San Diego</title>
+    <meta name="description"
+        content="View our portfolio of recent general contracting, hom remodeling, masonry, and plumbing projects in San Diego.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Condensed:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+
+    <style>
+        .page-header {
+            background-color: var(--color-primary-navy);
+            color: var(--color-neutral-white);
+            padding-block: var(--spacing-16);
+            text-align: center;
+        }
+
+        /* Filter buttons layout */
+        .portfolio-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: var(--spacing-4);
+            margin-bottom: var(--spacing-12);
+        }
+
+        .filter-btn {
+            background: transparent;
+            border: 2px solid var(--color-neutral-lightgray);
+            padding: 0.5rem 1.25rem;
+            border-radius: 30px;
+            font-family: var(--font-family-sans);
+            font-weight: 500;
+            color: var(--color-secondary-gray);
+            cursor: pointer;
+            transition: all var(--transition-fast);
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: var(--color-primary-navy);
+            color: var(--color-neutral-white);
+            border-color: var(--color-primary-navy);
+        }
+
+        /* Portfolio Grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-6);
+        }
+
+        @media (min-width: 640px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .portfolio-item {
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            background: var(--color-neutral-white);
+            box-shadow: var(--shadow-sm);
+            transition: transform var(--transition-base), box-shadow var(--transition-base);
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .portfolio-image {
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .portfolio-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-item:hover .portfolio-image img {
+            transform: scale(1.08);
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 51, 102, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity var(--transition-base);
+        }
+
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+
+        .portfolio-overlay i {
+            color: var(--color-neutral-white);
+            font-size: 2rem;
+            transform: translateY(20px);
+            transition: transform var(--transition-base);
+        }
+
+        .portfolio-item:hover .portfolio-overlay i {
+            transform: translateY(0);
+        }
+
+        .portfolio-info {
+            padding: var(--spacing-4);
+        }
+
+        .portfolio-info h3 {
+            font-size: var(--font-size-lg);
+            margin-bottom: var(--spacing-1);
+        }
+
+        .portfolio-category {
+            color: var(--color-accent-orange);
+            font-weight: 500;
+            font-size: var(--font-size-sm);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="/" class="logo">
+                RSR Contracting
+            </a>
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html" class="active">Portfolio</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="contact.html" class="btn btn-primary">Request Free Estimate</a>
+            </div>
+            <button class="mobile-menu-btn" aria-expanded="false" aria-label="Toggle menu"><i
+                    class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="fade-in">Recent Projects in San Diego</h1>
+            <p class="fade-in" style="font-size: var(--font-size-lg); max-width: 800px; margin-inline: auto;">Explore
+                our portfolio of remodeling, masonry, and contracting work.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Gallery -->
+    <section class="section">
+        <div class="container">
+
+            <div class="portfolio-filters fade-in">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="remodeling">Remodeling</button>
+                <button class="filter-btn" data-filter="masonry">Masonry & Concrete</button>
+                <button class="filter-btn" data-filter="plumbing">Plumbing / Bath</button>
+            </div>
+
+            <!-- In a real app we'd need multiple images, reusing the ones we have for demo -->
+            <div class="portfolio-grid">
+
+                <!-- Item 1: Kitchen -->
+                <!-- We will use the hero image as a placeholder for kitchen if the new image fails. We assume new image might be available soon -->
+                <div class="portfolio-item fade-in" data-category="remodeling">
+                    <div class="portfolio-image">
+                        <img src="/home/mint/.gemini/antigravity/brain/ff0f862a-4636-4518-b011-7aa212887446/hero_remodel_1771688489244.png"
+                            alt="Home Exterior Remodel">
+                        <div class="portfolio-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Full Exterior Renovation</h3>
+                        <div class="portfolio-category">Remodeling</div>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Complete exterior overhaul featuring custom
+                            architectural details and structural upgrades.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2: Masonry -->
+                <div class="portfolio-item fade-in" data-category="masonry">
+                    <div class="portfolio-image">
+                        <img src="/home/mint/.gemini/antigravity/brain/ff0f862a-4636-4518-b011-7aa212887446/masonry_patio_1771688533711.png"
+                            alt="Concrete Patio">
+                        <div class="portfolio-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Premium Concrete Patio & Fire Pit</h3>
+                        <div class="portfolio-category">Masonry & Concrete</div>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Custom paver installation integrating a
+                            built-in fire pit for an outdoor living space.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3: Bathroom -->
+                <div class="portfolio-item fade-in" data-category="plumbing">
+                    <div class="portfolio-image">
+                        <img src="/home/mint/.gemini/antigravity/brain/ff0f862a-4636-4518-b011-7aa212887446/bathroom_remodel_1771688554258.png"
+                            alt="Bathroom Remodel">
+                        <div class="portfolio-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Luxury Master Bath Suite</h3>
+                        <div class="portfolio-category">Plumbing / Bath</div>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Walk-in shower with marble tile, glass
+                            enclosure, and high-end plumbing fixtures.</p>
+                    </div>
+                </div>
+
+                <!-- Item 4: General Remodel -->
+                <div class="portfolio-item fade-in" data-category="remodeling">
+                    <div class="portfolio-image">
+                        <!-- fallback placeholder simulating a kitchen -->
+                        <div
+                            style="width: 100%; height: 100%; background: #e0e0e0; display:flex; align-items:center; justify-content:center;">
+                            <i class="fa-solid fa-kitchen-set" style="font-size: 4rem; color: #a0a0a0;"></i>
+                        </div>
+                        <div class="portfolio-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Modern Kitchen Remodel</h3>
+                        <div class="portfolio-category">Remodeling</div>
+                        <p style="margin-top: 0.5rem; font-size: 0.9rem;">High-contrast modern kitchen with premium
+                            appliances and custom cabinetry.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center" style="margin-top: var(--spacing-12);">
+                <a href="contact.html" class="btn btn-primary btn-large">See Your Project Here - Contact Us</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom" style="padding-top:0; border-top:none;">
+                <p>&copy; 2026 RSR Contracting. All rights reserved. Licensed & Insured San Diego General Contractor.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        // Simple filter logic for demo
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const portfolioItems = document.querySelectorAll('.portfolio-item');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    portfolioItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                            setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'scale(1)'; }, 50);
+                        } else {
+                            item.style.opacity = '0';
+                            item.style.transform = 'scale(0.9)';
+                            setTimeout(() => { item.style.display = 'none'; }, 300);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

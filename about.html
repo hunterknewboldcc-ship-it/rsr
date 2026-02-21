@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | RSR Contracting San Diego</title>
+    <meta name="description"
+        content="Learn about RSR Contracting, San Diego's trusted general contractor with a 5.0 Yelp rating and a commitment to quality craftsmanship.">
+
+    <!-- Google Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Condensed:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="index.css">
+
+    <style>
+        .page-header {
+            background-color: var(--color-primary-navy);
+            color: var(--color-neutral-white);
+            padding-block: var(--spacing-16);
+            text-align: center;
+        }
+
+        .page-header h1 {
+            color: var(--color-neutral-white);
+            margin-bottom: var(--spacing-4);
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-8);
+            margin-top: var(--spacing-12);
+        }
+
+        @media (min-width: 640px) {
+            .values-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .values-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .value-card {
+            text-align: center;
+            padding: var(--spacing-6);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            color: var(--color-accent-orange);
+            margin-bottom: var(--spacing-4);
+        }
+
+        .map-container {
+            width: 100%;
+            height: 400px;
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .img-block {
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="/" class="logo">
+                RSR Contracting
+                <span>San Diego General Contractor</span>
+            </a>
+
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="reviews.html">Reviews</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:6197637058" class="phone-link">
+                    <i class="fa-solid fa-phone"></i> (619) 763-7058
+                </a>
+                <a href="contact.html" class="btn btn-primary">Request Free Estimate</a>
+            </div>
+
+            <button class="mobile-menu-btn" aria-expanded="false" aria-label="Toggle menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="fade-in">About RSR Contracting</h1>
+            <p class="fade-in" style="font-size: var(--font-size-lg); max-width: 800px; margin-inline: auto;">San
+                Diego's Trusted General Contractor for Home Remodeling & Masonry</p>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="fade-in">
+                    <h2>Our Story & Mission</h2>
+                    <p style="font-size: var(--font-size-lg); margin-bottom: var(--spacing-6);">Delivering top-notch
+                        construction services tailored to your specific needs.</p>
+                    <p>Founded by Jose Perez Jr., RSR Contracting has deep roots in the San Diego community. We started
+                        with a simple belief: homeowners deserve reliable, transparent, and high-quality craftsmanship
+                        without the typical stress associated with home renovations.</p>
+                    <p>With a 5.0 Yelp rating and a commitment to 10-minute response times, we prioritize clear
+                        communication and meticulous attention to detail. Whether it's a complete kitchen remodel,
+                        custom masonry work, or emergency plumbing, our team ensures every project meets our rigorous
+                        standards and your personal vision.</p>
+
+                    <div style="margin-top: var(--spacing-8);">
+                        <a href="contact.html" class="btn btn-primary">Meet Our Team & Request Consultation</a>
+                    </div>
+                </div>
+                <div class="fade-in img-block">
+                    <!-- Reusing hero image for high quality aesthetic -->
+                    <img src="/home/mint/.gemini/antigravity/brain/ff0f862a-4636-4518-b011-7aa212887446/hero_remodel_1771688489244.png"
+                        alt="RSR Contracting Workmanship">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Values -->
+    <section class="section bg-offwhite">
+        <div class="container">
+            <div class="text-center fade-in">
+                <h2>Our Core Values</h2>
+                <p>The principles that guide every project we undertake.</p>
+            </div>
+
+            <div class="values-grid">
+                <div class="value-card fade-in">
+                    <i class="fa-solid fa-hammer value-icon"></i>
+                    <h3>Quality Craftsmanship</h3>
+                    <p>We use premium materials and precise techniques to ensure structural integrity and stunning
+                        finishes.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <i class="fa-regular fa-comments value-icon"></i>
+                    <h3>Timely Communication</h3>
+                    <p>We maintain a 100% response rate. You'll always know the status of your project.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <i class="fa-solid fa-handshake-angle value-icon"></i>
+                    <h3>Customer Satisfaction</h3>
+                    <p>Our 5.0 Yelp rating reflects our dedication to exceeding client expectations on every job.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <i class="fa-solid fa-shield-cat value-icon"></i>
+                    <h3>Guaranteed Protection</h3>
+                    <p>Fully licensed and insured, backed by Yelp Guaranteed coverage for your peace of mind.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Area Map -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center fade-in" style="margin-bottom: var(--spacing-8);">
+                <h2>Proudly Serving San Diego</h2>
+                <p>Located in the 92154 area, we serve homeowners throughout the greater San Diego region.</p>
+            </div>
+
+            <div class="map-container fade-in">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107567.9254095493!2d-117.15178550080644!3d32.58988698650393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d94f26beeb2c73%3A0xe5cd8bfa17cb97cb!2sSan%20Diego%2C%20CA%2092154!5e0!3m2!1sen!2sus!4v1709230501438!5m2!1sen!2sus"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="/" class="logo" style="color: white; margin-bottom: var(--spacing-4);">
+                        RSR Contracting
+                    </a>
+                    <p style="color: var(--color-neutral-lightgray); font-size: var(--font-size-sm);">
+                        Expert General Contracting & Home Remodeling in San Diego. Built to Last, Backed by 5.0 Stars.
+                        Let's build your vision.
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="portfolio.html">Project Portfolio</a></li>
+                        <li><a href="reviews.html">Client Reviews</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">General Contracting</a></li>
+                        <li><a href="services.html">Home Remodeling</a></li>
+                        <li><a href="services.html">Masonry & Concrete</a></li>
+                        <li><a href="services.html">Plumbing Services</a></li>
+                        <li><a href="services.html">Bathroom Remodeling</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Information</h4>
+                    <ul class="footer-contact" style="list-style: none; padding: 0;">
+                        <li><i class="fa-solid fa-phone"></i><a href="tel:6197637058"
+                                style="color: var(--color-neutral-lightgray);">(619) 763-7058</a></li>
+                        <li><i class="fa-solid fa-envelope"></i><a href="mailto:info@rsrcontractingconst.com"
+                                style="color: var(--color-neutral-lightgray);">info@rsrcontractingconst.com</a></li>
+                        <li><i class="fa-solid fa-location-dot"></i><span>San Diego, CA 92154</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 RSR Contracting. All rights reserved. Licensed & Insured San Diego General Contractor.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

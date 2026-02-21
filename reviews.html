@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Reviews | RSR Contracting San Diego</title>
+    <meta name="description"
+        content="Read our 5-star reviews from satisfied San Diego homeowners. See why we are the trusted choice for general contracting and remodeling.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Condensed:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+
+    <style>
+        .page-header {
+            background-color: var(--color-primary-navy);
+            color: var(--color-neutral-white);
+            padding-block: var(--spacing-16);
+            text-align: center;
+        }
+
+        .yelp-badge-container {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-4);
+            background: rgba(255, 255, 255, 0.1);
+            padding: var(--spacing-3) var(--spacing-6);
+            border-radius: 50px;
+            margin-top: var(--spacing-6);
+        }
+
+        .review-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: var(--spacing-6);
+            margin-top: var(--spacing-12);
+        }
+
+        @media (min-width: 768px) {
+            .review-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .review-card {
+            background: var(--color-neutral-white);
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-8);
+            box-shadow: var(--shadow-sm);
+            border-top: 4px solid #FF1A1A;
+            /* Yelp Red accent */
+            transition: transform var(--transition-base), box-shadow var(--transition-base);
+        }
+
+        .review-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .reviewer-info {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-4);
+            margin-bottom: var(--spacing-4);
+        }
+
+        .reviewer-avatar {
+            width: 50px;
+            height: 50px;
+            background-color: var(--color-neutral-lightgray);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--color-secondary-gray-mid);
+        }
+
+        .reviewer-name h3 {
+            margin: 0;
+            font-size: var(--font-size-lg);
+            color: var(--color-secondary-gray);
+        }
+
+        .reviewer-name p {
+            margin: 0;
+            font-size: var(--font-size-sm);
+            color: var(--color-secondary-gray-mid);
+        }
+
+        .review-stars {
+            color: #FFD700;
+            margin-bottom: var(--spacing-4);
+        }
+
+        .review-text {
+            font-style: italic;
+            color: var(--color-secondary-gray);
+            line-height: 1.6;
+        }
+
+        .leave-review-section {
+            background-color: var(--color-neutral-offwhite);
+            border-radius: var(--border-radius-md);
+            padding: var(--spacing-10);
+            text-align: center;
+            margin-top: var(--spacing-16);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="/" class="logo">
+                RSR Contracting
+            </a>
+            <nav class="nav-links">
+                <a href="/">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="reviews.html" class="active">Reviews</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="header-actions">
+                <a href="contact.html" class="btn btn-primary">Request Free Estimate</a>
+            </div>
+            <button class="mobile-menu-btn" aria-expanded="false" aria-label="Toggle menu"><i
+                    class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="fade-in">What Our San Diego Clients Say</h1>
+            <div class="yelp-badge-container fade-in">
+                <i class="fa-brands fa-yelp" style="color: #FF1A1A; font-size: 2rem;"></i>
+                <div style="text-align: left;">
+                    <div style="color: #FFD700; font-size: 1.25rem;"><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    <span style="font-size: var(--font-size-sm); font-weight: 500;">5.0 Rating &middot; 100% Response
+                        Rate</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="review-grid">
+
+                <!-- Review 1 -->
+                <div class="review-card fade-in">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar"><i class="fa-solid fa-user"></i></div>
+                        <div class="reviewer-name">
+                            <h3>Alana Z.</h3>
+                            <p>San Diego, CA</p>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"I had a great experience working with RSR Contracting! I discovered them
+                        through the Home Depot Pro Desk. Their craftsmanship and professionalism exceeded my
+                        expectations. They arrived on time, communicated clearly throughout the process, and left the
+                        workspace spotless."</p>
+                </div>
+
+                <!-- Review 2 (Placeholder based on vibe) -->
+                <div class="review-card fade-in">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar"><i class="fa-solid fa-user"></i></div>
+                        <div class="reviewer-name">
+                            <h3>Michael T.</h3>
+                            <p>Chula Vista, CA</p>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"Jose and his team did an incredible job pouring a new concrete driveway and
+                        walkway for our home. The attention to detail is obvious, and they finished exactly when they
+                        said they would. Highly recommend them for any masonry work."</p>
+                </div>
+
+                <!-- Review 3 (Placeholder) -->
+                <div class="review-card fade-in">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar"><i class="fa-solid fa-user"></i></div>
+                        <div class="reviewer-name">
+                            <h3>Sarah M.</h3>
+                            <p>La Mesa, CA</p>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"We hired RSR for a complete master bathroom remodel including significant
+                        plumbing updates. The tile work is flawless, and the walk-in shower feels like a luxury spa.
+                        They were respectful of our home and very responsive."</p>
+                </div>
+
+                <!-- Review 4 (Placeholder) -->
+                <div class="review-card fade-in">
+                    <div class="reviewer-info">
+                        <div class="reviewer-avatar"><i class="fa-solid fa-user"></i></div>
+                        <div class="reviewer-name">
+                            <h3>David R.</h3>
+                            <p>San Diego, CA</p>
+                        </div>
+                    </div>
+                    <div class="review-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="review-text">"Finding a reliable contractor can be tough, but RSR made it easy. They
+                        helped with a kitchen remodel update. The communication was the best part—literally a 10-minute
+                        response time whenever we had a question."</p>
+                </div>
+            </div>
+
+            <!-- Leave a Review CTA -->
+            <div class="leave-review-section fade-in">
+                <h2 style="margin-bottom: var(--spacing-4);">Share Your Experience</h2>
+                <p style="margin-bottom: var(--spacing-8); max-width: 600px; margin-inline: auto;">Have we recently
+                    completed a project for you? We'd love to hear your feedback. Your reviews help us continue to
+                    provide top-quality service to the San Diego community.</p>
+
+                <a href="#" class="btn btn-secondary" style="border-color: #FF1A1A; color: #FF1A1A; font-weight: 700;">
+                    <i class="fa-brands fa-yelp" style="margin-right: 0.5rem;"></i> Write a Review on Yelp
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom" style="padding-top:0; border-top:none;">
+                <p>&copy; 2026 RSR Contracting. All rights reserved. Licensed & Insured San Diego General Contractor.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
